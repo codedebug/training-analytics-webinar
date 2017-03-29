@@ -1,4 +1,4 @@
-const config = require('../../../config');
+const config = require(process.env.CONFIG ? '../../' + process.env.CONFIG : '../../../config');
 
 function validateRequiredFields (jsonMsg, callback) {
   const jsonKeys = Object.keys(jsonMsg);

@@ -1,5 +1,5 @@
 const amqp = require('amqplib/callback_api');
-const config = require('../../config');
+const config = require(process.env.CONFIG ? '../' + process.env.CONFIG : '../../config');
 
 module.exports = (() => {
   let instance;
