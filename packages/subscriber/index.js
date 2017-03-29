@@ -1,5 +1,5 @@
 const amqp = require('amqplib/callback_api');
-const config = require('../config');
+const config = require(process.env.CONFIG || '../config');
 
 amqp.connect(config.rabbitmq.url, (err, conn) => {
   if (err) {

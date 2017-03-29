@@ -3,7 +3,7 @@ const http = require('http');
 const waterfall = require('async/waterfall');
 const apply = require('async/apply');
 
-const config = require('../config');
+const config = require(process.env.CONFIG || '../config');
 const analyticsHandler = require('./src/analyticsHandler');
 const { bodyParser, validateRequiredFields } = require('./src/utils');
 

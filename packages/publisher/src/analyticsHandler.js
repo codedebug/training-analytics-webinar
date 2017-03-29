@@ -1,4 +1,4 @@
-const { analyticsKeyTable, publisher } = require('../../config');
+const { analyticsKeyTable, publisher } = require(process.env.CONFIG ? '../' + process.env.CONFIG : '../../config');
 const Publisher = require('./publisher');
 const getKey = require('./utils/getKey');
 

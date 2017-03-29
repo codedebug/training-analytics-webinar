@@ -1,6 +1,6 @@
 module.exports = {
   rabbitmq: {
-    url: 'amqp://localhost',
+    url: process.env.RABBITMQ_URL || 'amqp://localhost',
     topic: 'topic_logs'
   },
   analyticsKeyTable: {
@@ -10,7 +10,7 @@ module.exports = {
   publisher: {
     defaultKey: 'analytics.general',
     msgFields: ['userId', 'event'],
-    port: 8080
+    port: process.env.PORT || 8080
   },
   subscriber: {
     defaultKey: 'analytics.#'
