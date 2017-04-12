@@ -5,7 +5,7 @@ services:
       context: ./packages
       dockerfile: publisher/Dockerfile
     environment:
-      - RABBITMQ_URL=rabbitmq
+      - RABBITMQ_URL=amqp://rabbitmq
       - PORT=3000
     ports:
       - "8080:3000"  
@@ -17,7 +17,7 @@ services:
       context: ./packages
       dockerfile: subscriber/Dockerfile
     environment:
-      - RABBITMQ_URL=rabbitmq
+      - RABBITMQ_URL=amqp://rabbitmq
     links:
       - rabbitmq
  
