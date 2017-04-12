@@ -12,7 +12,7 @@ const server = http.createServer((request, response) => {
 
   if (!(request.method === 'POST' && request.url === '/analytics')) {
     response.statusCode = 404;
-    return response.end(new Error('Invalid route'));
+    return response.end('Invalid route');
   }
 
   waterfall([
