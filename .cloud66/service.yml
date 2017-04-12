@@ -1,7 +1,7 @@
 ---
 services:
   publisher:
-    git_url: git@github.com:kamerblauwlicht/training-analytics-webinar.git
+    git_url: git@github.com:yldio/training-analytics-webinar.git
     git_branch: master
     ports:
     - container: 3000
@@ -13,7 +13,7 @@ services:
       PORT: 3000
       RABBITMQ_URL: amqp://rabbitmq.cloud66.local
   subscriber:
-    git_url: git@github.com:kamerblauwlicht/training-analytics-webinar.git
+    git_url: git@github.com:yldio/training-analytics-webinar.git
     git_branch: master
     build_root: packages
     dockerfile_path: subscriber/Dockerfile
